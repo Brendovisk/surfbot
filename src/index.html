@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Website from the Origamid's design course, Built using Tailwind CSS framework" />
 
     <title>Surfbot</title>
 
@@ -31,10 +33,17 @@
         <div class="container flex justify-between items-center py-3">
           <a href="#"><img src="./assets/logo.svg" alt="Surfbot" /></a>
           <nav>
-            <button data-header="btn" class="uppercase rounded-sm p-2 bg-black-200 hidden -md:flex">
+            <button
+              data-header="btn"
+              class="uppercase rounded-sm p-2 bg-black-200 hidden -md:flex"
+              aria-label="Abrir Menu"
+              aria-expanded="false"
+              aria-controls="menu"
+            >
               <span></span>
             </button>
             <ul
+              id="menu"
               class="flex gap-11 -md:absolute -md:top-[64px] -md:overflow-hidden -md:left-0 -md:flex-col -md:bg-black-600 -md:w-full -md:h-0 -md:px-4"
             >
               <li class="-md:opacity-0">
@@ -93,11 +102,11 @@
         <div class="pr-32 -lg:pr-0">
           <div class="bg-gallery bg-cover aspect-[570/670] -lg:hidden"></div>
           <div class="bg-map bg-cover w-11/12 mx-auto -mt-40 aspect-[540/240] -lg:-mt-0 -lg:w-full"></div>
-          <h3
+          <p
             class="mt-9 mb-2 uppercase flex items-center gap-2 text-black-600 font-bold before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
           >
             Como Chegar
-          </h3>
+          </p>
           <dl class="flex flex-wrap items-center gap-x-1 gap-y-2 max-w-[36ch] -lg:text-sm">
             <dt
               class="flex items-center gap-1 font-bold text-black-600 before:content-[''] before:inline-block before:w-3 before:h-[3px] before:bg-blue-400"
