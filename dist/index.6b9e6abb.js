@@ -1,0 +1,2 @@
+(new class{constructor(){this.header=document.querySelector("[data-header='header']"),this.btn=document.querySelector("[data-header='btn']"),this.toggleClass=this.toggleClass.bind(this)}toggleClass(){this.header.classList.toggle("opened")}headerEventListener(){this.btn.addEventListener("click",this.toggleClass)}init(){return this.header&&this.btn&&this.headerEventListener(),this}}).init();
+//# sourceMappingURL=index.6b9e6abb.js.map
