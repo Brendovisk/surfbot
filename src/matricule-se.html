@@ -72,9 +72,13 @@
     </header>
     <main>
       <section>
-        <h1 class="font-title text-center py-6 px-2 text-7xl -lg:text-5l text-black-400 bg-white-200">Matricule-se</h1>
+        <h1 class="font-title text-center py-6 px-2 text-7xl text-black-400 bg-white-200 -lg:text-5xl">Matricule-se</h1>
         <div class="container py-12">
-          <form action="#" method="POST" class="grid custom-enroll-grid gap-x-28 -2xl:gap-x-20">
+          <form
+            action="#"
+            method="POST"
+            class="grid custom-enroll-grid gap-x-28 -xl:grid-cols-2 -lg:flex -lg:flex-col-reverse -lg:gap-10 -2xl:gap-x-20"
+          >
             <div>
               <label for="nome">
                 <span class="text-black-400 font-bold mb-2 block text-lg">Nome</span>
@@ -107,7 +111,7 @@
                   class="block bg-white-200 px-4 h-12 rounded-md shadow-md shadow-gray-200 w-full placeholder:font-bold placeholder:text-white-400"
                 />
               </label>
-              <div class="grid grid-cols-2 gap-x-8 gap-y-1">
+              <div class="grid grid-cols-2 gap-x-8 gap-y-1 -sm:grid-cols-1">
                 <label for="endereco">
                   <span class="text-black-400 font-bold mt-4 mb-2 block text-lg">Endereço</span>
                   <input
@@ -167,8 +171,13 @@
                 <span class="block font-bold text-lg text-blue-400 mt-8 mb-4"><legend>Forma de Pagamento</legend></span>
                 <hr class="border-none h-0.5 w-full bg-white-200 mb-8" />
 
-                <div class="flex w-fit overflow-hidden rounded-md mb-10 h-10 gap-0.5">
-                  <label for="cartao" class="bg-white-200 font-bold flex items-center gap-1.5 px-3 cursor-pointer">
+                <div
+                  class="flex w-fit overflow-hidden rounded-md mb-10 h-10 gap-0.5 -sm:flex-col -sm:h-fit -sm:gap-4 -sm:rounded-none"
+                >
+                  <label
+                    for="cartao"
+                    class="bg-white-200 font-bold flex items-center gap-1.5 px-3 cursor-pointer -sm:rounded-md -sm:py-3"
+                  >
                     <input
                       data-toggle-trigger="payment"
                       type="radio"
@@ -179,7 +188,10 @@
                     />
                     Cartão de Crédito
                   </label>
-                  <label for="boleto" class="bg-white-200 font-bold flex items-center gap-1.5 px-3 cursor-pointer">
+                  <label
+                    for="boleto"
+                    class="bg-white-200 font-bold flex items-center gap-1.5 px-3 cursor-pointer -sm:rounded-md -sm:py-3"
+                  >
                     <input
                       data-toggle-trigger="payment"
                       type="radio"
@@ -193,7 +205,7 @@
                 </div>
 
                 <div data-toggle-target="payment" class="hidden">
-                  <div class="grid grid-cols-2 gap-x-7 gap-y-2">
+                  <div class="grid grid-cols-2 gap-x-7 gap-y-2 -sm:grid-cols-1">
                     <label for="nome-cartao">
                       <span class="text-black-400 font-bold mt-4 mb-2 block text-lg">Nome no Cartão</span>
                       <input
@@ -269,7 +281,7 @@
                   </div>
                 </div>
 
-                <p data-toggle-target="payment" class="hidden text-2xl my-8">
+                <p data-toggle-target="payment" class="hidden text-2xl my-8 -md:text-xl">
                   Iremos te redirecionar para a tela de pagamento do boleto assim que você clicar em
                   <span class="font-bold">"Realizar Matrícula"</span>.
                 </p>
@@ -293,12 +305,17 @@
               </fieldset>
             </div>
 
-            <fieldset class="h-fit rounded-md bg-white-200 px-6 pt-5 pb-7">
+            <fieldset class="h-fit rounded-md bg-white-200 px-6 pt-5 pb-7 -sm:px-4">
               <span>
                 <legend class="font-bold text-lg mb-5">Escolha o Plano</legend>
               </span>
-              <div class="flex overflow-hidden rounded-md mb-10 h-10 gap-0.5">
-                <label for="infantil" class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1">
+              <div
+                class="flex overflow-hidden rounded-md mb-10 h-10 gap-0.5 -sm:flex-col -sm:h-fit -sm:gap-4 -sm:rounded-none"
+              >
+                <label
+                  for="infantil"
+                  class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1 -sm:rounded-md -sm:py-3"
+                >
                   <input
                     data-toggle-trigger="plan"
                     type="radio"
@@ -309,7 +326,10 @@
                   />
                   Infantil
                 </label>
-                <label for="adulto" class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1">
+                <label
+                  for="adulto"
+                  class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1 -sm:rounded-md -sm:py-3"
+                >
                   <input
                     data-toggle-trigger="plan"
                     type="radio"
@@ -322,7 +342,7 @@
                 </label>
                 <label
                   for="profissional"
-                  class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1"
+                  class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1 -sm:rounded-md -sm:py-3"
                 >
                   <input
                     data-toggle-trigger="plan"
