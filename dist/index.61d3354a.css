@@ -267,44 +267,12 @@ img, video {
   position: relative;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
-}
-
-.h-2 {
-  height: .5rem;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
-.w-5 {
-  width: 1.25rem;
-}
-
-.w-7 {
-  width: 1.75rem;
-}
-
-.border-spacing-1\.5 {
-  --tw-border-spacing-x: .375rem;
-  --tw-border-spacing-y: .375rem;
-  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
-}
-
-.border-spacing-1 {
-  --tw-border-spacing-x: .25rem;
-  --tw-border-spacing-y: .25rem;
-  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
 .items-center {
@@ -321,19 +289,6 @@ img, video {
 
 .rounded-sm {
   border-radius: .125rem;
-}
-
-.border-2 {
-  border-width: 2px;
-}
-
-.border-r {
-  border-right-width: 1px;
-}
-
-.border-red-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 55 38 / var(--tw-border-opacity));
 }
 
 .bg-blue-400 {
@@ -360,11 +315,6 @@ img, video {
   padding-bottom: .75rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -376,6 +326,87 @@ img, video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (max-width: 640px) {
+  [data-header="header"] nav > ul {
+    transition: all .3s;
+  }
+
+  [data-header="header"] nav > ul li {
+    transform: translateX(-10px);
+    transition-duration: .2s !important;
+  }
+
+  [data-header="header"] [data-header="btn"] {
+    aspect-ratio: 1 / 1;
+    align-items: center;
+    display: flex;
+  }
+
+  [data-header="header"] [data-header="btn"] span {
+    height: 2px;
+    width: 25px;
+    background-color: #fff;
+  }
+
+  [data-header="header"] [data-header="btn"] span:before, [data-header="header"] [data-header="btn"] span:after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    transform-origin: center;
+    background-color: #fff;
+    transition: all .3s;
+    display: block;
+  }
+
+  [data-header="header"] [data-header="btn"] span:before {
+    margin-top: -7px;
+  }
+
+  [data-header="header"] [data-header="btn"] span:after {
+    margin-top: 13px;
+  }
+
+  [data-header="header"].opened [data-header="btn"] span {
+    background-color: #0000;
+  }
+
+  [data-header="header"].opened [data-header="btn"] span:before {
+    margin-top: 0;
+    transform: rotate(45deg);
+  }
+
+  [data-header="header"].opened [data-header="btn"] span:after {
+    margin-top: -1px;
+    transform: rotate(-45deg)translateY(-1px);
+  }
+
+  [data-header="header"].opened nav > ul {
+    height: calc(100vh - 64px);
+    padding-block: 1.5rem;
+  }
+
+  [data-header="header"].opened nav > ul li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  [data-header="header"].opened nav > ul li:nth-child(1) {
+    transition-delay: .2s;
+  }
+
+  [data-header="header"].opened nav > ul li:nth-child(2) {
+    transition-delay: .3s;
+  }
+
+  [data-header="header"].opened nav > ul li:nth-child(3) {
+    transition-delay: .4s;
+  }
+
+  [data-header="header"].opened nav > ul li:nth-child(4) {
+    transition-delay: .5s;
+  }
 }
 
 .before\:absolute:before {
@@ -408,11 +439,6 @@ img, video {
   bottom: 0;
 }
 
-.before\:block:before {
-  content: var(--tw-content);
-  display: block;
-}
-
 .before\:h-2:before {
   content: var(--tw-content);
   height: .5rem;
@@ -431,11 +457,6 @@ img, video {
 .before\:w-0:before {
   content: var(--tw-content);
   width: 0;
-}
-
-.before\:w-7:before {
-  content: var(--tw-content);
-  width: 1.75rem;
 }
 
 .before\:rounded-full:before {
@@ -544,8 +565,8 @@ img, video {
     display: none;
   }
 
-  .-md\:h-full-mobile {
-    height: calc(100vh - 64px);
+  .-md\:h-0 {
+    height: 0;
   }
 
   .-md\:w-full {
@@ -561,23 +582,27 @@ img, video {
     flex-direction: column;
   }
 
+  .-md\:overflow-hidden {
+    overflow: hidden;
+  }
+
   .-md\:bg-black-600 {
     --tw-bg-opacity: 1;
     background-color: rgb(23 34 45 / var(--tw-bg-opacity));
   }
 
-  .-md\:bg-opacity-95 {
-    --tw-bg-opacity: .95;
-  }
-
-  .-md\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  .-md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .-md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .-md\:opacity-0 {
+    opacity: 0;
   }
 
   .-md\:before\:hidden:before {

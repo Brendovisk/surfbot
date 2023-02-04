@@ -1,3 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (max-width: theme("screens.sm")) {
+  [data-header="header"] {
+    nav > ul {
+      transition: 0.3s;
+
+      li {
+        transition-duration: 0.2s !important;
+        transform: translateX(-10px);
+      }
+    }
+
+    [data-header="btn"] {
+      display: flex;
+      align-items: center;
+      aspect-ratio: 1/1;
+
+      span {
+        background-color: theme(colors.white);
+        height: 2px;
+        width: 25px;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          width: 25px;
+          height: 2px;
+          background-color: theme(colors.white);
+          transition: 0.3s;
+          transform-origin: center;
+        }
+
+        &::before {
+          margin-top: -7px;
+        }
+
+        &::after {
+          margin-top: 13px;
+        }
+      }
+    }
+
+    &.opened {
+      [data-header="btn"] {
+        span {
+          background-color: transparent;
+          &::before {
+            transform: rotate(45deg);
+            margin-top: 0;
+          }
+
+          &::after {
+            transform: rotate(-45deg) translateY(-1px);
+            margin-top: -1px;
+          }
+        }
+      }
+
+      nav > ul {
+        height: theme(height.full-mobile);
+        padding-block: theme(padding.6);
+
+        li {
+          opacity: 1;
+          transform: translateX(0);
+
+          &:nth-child(1) {
+            transition-delay: 0.2s;
+          }
+
+          &:nth-child(2) {
+            transition-delay: 0.3s;
+          }
+
+          &:nth-child(3) {
+            transition-delay: 0.4s;
+          }
+
+          &:nth-child(4) {
+            transition-delay: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
