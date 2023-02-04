@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  color: theme(colors.black-400);
+}
+
 @media (max-width: theme("screens.sm")) {
   [data-header="header"] {
     nav > ul {

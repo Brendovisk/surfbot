@@ -73,7 +73,7 @@
     <main>
       <section class="bg-hero bg-cover min-h-[60vh] flex items-end pb-10">
         <div class="container h-full flex justify-between items-center -lg:flex-col -lg:gap-10">
-          <h1 class="font-title text-white text-6xl -lg:text-5xl -lg:text-center">Escola de Surf</h1>
+          <h1 class="font-title text-white text-7xl -lg:text-5xl -lg:text-center">Escola de Surf</h1>
           <form method="POST" action="#" class="flex h-11">
             <input
               type="email"
@@ -81,12 +81,80 @@
               class="rounded-tl-md rounded-bl-md px-4 max-w-xs w-full placeholder:text-white-400 tracking-wide placeholder:font-bold outline-none"
             />
             <button
-              class="flex items-center gap-5 uppercase whitespace-nowrap bg-red-400 text-white px-4 rounded-tr-md rounded-br-md font-bold hover:bg-red-600"
+              class="flex items-center gap-5 uppercase whitespace-nowrap bg-red-400 text-white px-4 rounded-tr-md rounded-br-md font-bold hover:bg-red-600 transition-all duration-300"
             >
               Matricule-se
               <img src="./assets/next.svg" alt="" />
             </button>
           </form>
+        </div>
+      </section>
+      <section class="grid grid-cols-2 container py-20 -lg:flex -lg:flex-col-reverse -lg:gap-16">
+        <div class="pr-32 -lg:pr-0">
+          <div class="bg-gallery bg-cover aspect-[570/670] -lg:hidden"></div>
+          <div class="bg-map bg-cover w-11/12 mx-auto -mt-40 aspect-[540/240] -lg:-mt-0 -lg:w-full"></div>
+          <h3
+            class="mt-9 mb-2 uppercase flex items-center gap-2 text-black-600 font-bold before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+          >
+            Como Chegar
+          </h3>
+          <dl class="flex flex-wrap items-center gap-x-1 gap-y-2 max-w-[36ch] -lg:text-sm">
+            <dt
+              class="flex items-center gap-1 font-bold text-black-600 before:content-[''] before:inline-block before:w-3 before:h-[3px] before:bg-blue-400"
+            >
+              Carro
+            </dt>
+            <dd class="font-bold text-white-400">pela via Lúcio Costa sentido Barra</dd>
+            <dt
+              class="flex items-center gap-1 font-bold text-black-600 before:content-[''] before:inline-block before:w-3 before:h-[3px] before:bg-blue-400"
+            >
+              ônibus
+            </dt>
+            <dd class="font-bold text-white-400">linhas 2333, 138, 189 e 170</dd>
+            <dt
+              class="flex items-center gap-1 font-bold text-black-600 before:content-[''] before:inline-block before:w-3 before:h-[3px] before:bg-blue-400"
+            >
+              Metrô
+            </dt>
+            <dd class="font-bold text-white-400">linha azul sentido Zona Sul</dd>
+          </dl>
+        </div>
+        <div class="max-w-lg -lg:max-w-full">
+          <h2 class="font-title max-w-[11ch] text-7xl mb-16 -lg:text-5xl -lg:text-center -lg:max-w-full">
+            <span class="text-blue-400">Aulas</span> em uma das melhores praias do
+            <span class="text-blue-400">Rio</span>.
+          </h2>
+          <hr class="bg-white-200 mb-8 h-0.5 border-none" />
+          <ul>
+            <li
+              class="flex flex-wrap gap-8 items-center text-2xl after:content-[''] after:block after:w-full after:h-0.5 after:bg-white-200 my-9"
+            >
+              <img src="./assets/sandalhas.svg" alt="" />
+              8km de costa
+            </li>
+            <li
+              class="flex flex-wrap gap-8 items-center text-2xl after:content-[''] after:block after:w-full after:h-0.5 after:bg-white-200 my-9"
+            >
+              <img src="./assets/coco.svg" alt="" />
+              Restaurantes à beira mar
+            </li>
+            <li
+              class="flex flex-wrap gap-8 items-center text-2xl after:content-[''] after:block after:w-full after:h-0.5 after:bg-white-200 my-9"
+            >
+              <img src="./assets/boia.svg" alt="" />
+              Salva-vidas a cada 300m
+            </li>
+          </ul>
+          <p class="mb-8 max-w-[46ch] -lg:max-w-full">
+            Como cidade capital, abriga na zona chamada Plateau, promontório à beira-mar, edifícios públicos e outras
+            construções de importância, como o Palácio Presidencial, construído no fim do século XIX para ser a
+            residência do governador português.
+          </p>
+          <p class="max-w-[46ch] -lg:max-w-full">
+            Como cidade capital, abriga na zona chamada Plateau, promontório à beira-mar, edifícios públicos e outras
+            construções de importância, como o Palácio Presidencial, construído no fim do século XIX para ser a
+            residência do governador português.
+          </p>
         </div>
       </section>
     </main>
