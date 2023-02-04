@@ -80,9 +80,11 @@
       </div>
     </header>
     <main>
-      <section class="bg-hero bg-cover bg-center h-[60vh] max-h-[800px] flex items-end pb-10">
+      <section id="inicio" class="bg-hero bg-cover bg-center h-[60vh] max-h-[800px] flex items-end pb-10">
         <div class="container flex justify-between items-center -lg:flex-col -lg:gap-10">
-          <h1 class="font-title text-white text-7xl -lg:text-5xl -lg:text-center">Escola de Surf</h1>
+          <h1 aria-labelledby="inicio" class="font-title text-white text-7xl -lg:text-5xl -lg:text-center">
+            Escola de Surf
+          </h1>
           <form method="POST" action="#" class="flex h-11">
             <input
               type="email"
@@ -98,7 +100,7 @@
           </form>
         </div>
       </section>
-      <section class="grid grid-cols-2 container py-20 -lg:flex -lg:flex-col-reverse -lg:gap-16">
+      <section id="descricao-lugar" class="grid grid-cols-2 container py-20 -lg:flex -lg:flex-col-reverse -lg:gap-16">
         <div class="pr-32 -lg:pr-0">
           <div class="bg-gallery bg-cover aspect-[570/670] -lg:hidden"></div>
           <div class="bg-map bg-cover w-11/12 mx-auto -mt-40 aspect-[540/240] -lg:-mt-0 -lg:w-full"></div>
@@ -129,7 +131,10 @@
           </dl>
         </div>
         <div class="max-w-lg -lg:max-w-full">
-          <h2 class="font-title max-w-[11ch] text-7xl mb-16 -lg:text-5xl -lg:text-center -lg:max-w-full">
+          <h2
+            aria-labelledby="descricao-lugar"
+            class="font-title max-w-[11ch] text-7xl mb-16 -lg:text-5xl -lg:text-center -lg:max-w-full"
+          >
             <span class="text-blue-400">Aulas</span> em uma das melhores praias do
             <span class="text-blue-400">Rio</span>.
           </h2>
@@ -167,10 +172,11 @@
         </div>
       </section>
       <section
+        id="aulas"
         class="mt-20 pb-20 bg-white-200 before:content-[''] before:bg-waves before:block before:w-44 before:bg-cover before:mx-auto before:-translate-y-8 before:aspect-[176/68]"
       >
         <div class="container">
-          <h2 class="font-title text-7xl text-center mb-20 -lg:text-5xl">Aulas</h2>
+          <h2 aria-labelledby="aulas" class="font-title text-7xl text-center mb-20 -lg:text-5xl">Aulas</h2>
           <div class="grid grid-cols-3 gap-x-10 gap-y-20 mb-11 -lg:grid-cols-1">
             <div
               class="shadow-md bg-white rounded-md pb-9 px-20 -xl:px-10 -xl:pb-4 before:content-[''] before:block before:mx-auto before:h-12 before:-translate-y-7 before:mt-1 before:bg-logo before:bg-contain before:aspect-[22/39]"
@@ -301,8 +307,8 @@
           <figcaption class="font-bold text-lg">Regis Pereira</figcaption>
         </figure>
       </section>
-      <section class="pt-20 pb-10">
-        <h2 class="font-title text-7xl text-center mb-20 -lg:text-5xl">Contato</h2>
+      <section id="contato" class="pt-20 pb-10">
+        <h2 aria-labelledby="contato" class="font-title text-7xl text-center mb-20 -lg:text-5xl">Contato</h2>
         <div class="custom-grid grid container gap-x-36 -2xl:gap-x-20 -lg:grid-cols-1 -lg:gap-y-8">
           <form action="#" method="POST">
             <label for="nome">
