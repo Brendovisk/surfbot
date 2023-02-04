@@ -55,7 +55,7 @@
           <h1 class="font-title text-white text-7xl -lg:text-5xl -lg:text-center">Escola de Surf</h1>
           <form method="POST" action="#" class="flex h-11">
             <input type="email" placeholder="Email" class="rounded-tl-md rounded-bl-md px-4 max-w-xs w-full placeholder:text-white-400 tracking-wide placeholder:font-bold outline-none">
-            <button class="flex items-center gap-5 uppercase whitespace-nowrap bg-red-400 text-white px-4 rounded-tr-md rounded-br-md font-bold hover:bg-red-600 transition-all duration-300">
+            <button class="flex items-center gap-5 uppercase whitespace-nowrap bg-red-400 text-white pl-4 pr-6 rounded-tr-md rounded-br-md font-bold hover:bg-red-600 transition-all duration-300">
               Matricule-se
               <img src="/next.cb264130.svg" alt="">
             </button>
@@ -202,11 +202,61 @@
           </p>
         </div>
       </section>
-      <section class="bg-quote bg-cover">
+      <section class="bg-quote bg-fixed bg-cover">
         <figure class="min-h-[55vh] p-4 flex flex-col gap-6 justify-center items-center text-white">
-          <blockquote class="text-7xl -md:text-5xl font-title text-center max-w-[16ch]">“O surf liberta as ondas de uma vida.”</blockquote>
+          <blockquote class="text-7xl -md:text-5xl font-title text-center max-w-[16ch]">
+            “O surf liberta as ondas de uma vida.”
+          </blockquote>
           <figcaption class="font-bold text-lg">Regis Pereira</figcaption>
         </figure>
+      </section>
+      <section class="pt-20 pb-10">
+        <h2 class="font-title text-7xl text-center mb-20 -lg:text-5xl">Contato</h2>
+        <div class="custom-grid grid container gap-x-36 -2xl:gap-x-20 -lg:grid-cols-1 -lg:gap-y-8">
+          <form action="POST" method="#">
+            <label for="nome">
+              <span class="text-black-400 font-bold mt-4 mb-2 block text-lg">Nome</span>
+              <input type="text" id="nome" name="nome" required="" class="block bg-white-200 px-4 h-12 rounded-md shadow-md shadow-gray-200 w-full">
+            </label>
+            <label for="email">
+              <span class="text-black-400 font-bold mt-4 mb-2 block text-lg">Email</span>
+              <input type="email" id="email" name="email" required="" class="block bg-white-200 px-4 h-12 rounded-md shadow-md shadow-gray-200 w-full">
+            </label>
+            <label for="mensagem">
+              <span class="text-black-400 font-bold mt-4 mb-2 block text-lg">Mensagem</span>
+              <textarea name="mensagem" id="mensagem" rows="10" required="" class="block bg-white-200 p-4 rounded-md shadow-md shadow-gray-200 w-full resize-none h-64"></textarea>
+            </label>
+            <a href="#" class="flex items-center justify-between w-fit gap-4 text-lg uppercase rounded-md px-4 py-3 font-bold bg-black-400 text-white mt-10 transition-all duration-300 hover:shadow-lg hover:shadow-white-400">
+              Enviar Mensagem
+              <img src="/next.cb264130.svg" alt="">
+            </a>
+          </form>
+          <hr class="border-none h-full w-0.5 bg-white-200">
+          <address class="flex overflow-hidden relative gap-x-8 not-italic after:content-[''] after:block after:bg-icones after:bg-contain after:bg-no-repeat after:aspect-[221/337] after:w-64 -sm:after:absolute -sm:after:w-40 -sm:after:-top-8 -sm:after:-right-12">
+            <div class="flex-1">
+              <span class="block uppercase font-bold text-black-400 text-lg mb-2">Endereço</span>
+              <p>
+                Praia Mansa nº 47, <br>
+                Rio de Janeiro - RJ <br>
+                Procure a barraca vermelha
+              </p>
+              <a href="#" class="flex items-center gap-2 uppercase font-bold text-black-400 text-lg mt-3 mb-2">
+                Ver no mapa
+                <img src="/next-alt.a303eb7b.svg" alt="" width="17">
+              </a>
+              <div class="before:content-[''] before:block before:h-0.5 before:w-full before:bg-white-200 before:my-5 after:content-[''] after:block after:h-0.5 after:w-full after:bg-white-200 after:my-5">
+                <span class="block uppercase font-bold text-black-400 text-lg mb-2">Email & Telefone</span>
+                <a href="mailto:contato@surfbot.com" class="block">contato@surfbot.com</a>
+                <a href="tel:2199999-9999">21 99999-9999</a>
+              </div>
+              <span class="block relative gap-1 uppercase font-bold text-black-400 text-lg mb-2 before:content-[''] before:absolute before:-left-3 before:bottom-2.5 before:rounded-full before:border-2 before:border-[#16C70B] before:w-2 before:h-2">Horário</span>
+              <p>
+                De Sexta à Sábado <br>
+                Das 06:00 às 14:00
+              </p>
+            </div>
+          </address>
+        </div>
       </section>
     </main>
   </body>
