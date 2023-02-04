@@ -1,24 +1,36 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      primary: ["Alice", "serif"],
-      secondary: ["Nunito", "sans-serif"],
+      title: ["Alice", "serif"],
+      text: ["Nunito", ...defaultTheme.fontFamily.sans],
     },
     colors: {
       "blue-200": "#269BFF",
       "blue-400": "#1188EE",
       "blue-600": "#0467CC",
-      "grey-200": "#EFF4F9",
-      "grey-400": "#BBCCDD",
-      "grey-600": "#99AABB",
+      white: "#ffffff",
+      "white-200": "#EFF4F9",
+      "white-400": "#BBCCDD",
+      "white-600": "#99AABB",
       "black-200": "#667788",
       "black-400": "#445566",
       "black-600": "#17222D",
       "red-200": "#FF3726",
       "red-400": "#EE2211",
       "red-600": "#D91504",
+    },
+    extend: {
+      backgroundImage: {
+        hero: "url('/src/assets/intro.jpg')",
+        gallery: "url('/src/assets/foto-galeria.jpg')",
+        map: "url('/src/assets/mapa.jpg')",
+        quote: "url('/src/assets/quote.jpg')",
+      },
     },
   },
   plugins: [],
