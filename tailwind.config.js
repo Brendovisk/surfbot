@@ -37,6 +37,7 @@ module.exports = {
         waves: "url('/src/assets/ondas.svg')",
         logo: "url('/src/assets/surfbot-icon.svg')",
         icones: "url('/src/assets/bg-icones.svg')",
+        dropdown: "url('/src/assets/dropdown.svg')",
       },
       height: {
         "full-mobile": "calc(100vh - 64px)",

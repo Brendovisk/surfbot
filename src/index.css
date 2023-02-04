@@ -2,14 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   color: theme(colors.black-400);
 }
 
+/* custom grid for the contact in the homepage */
 .custom-grid {
   grid-template-columns: 1fr auto 1fr;
 }
 
+/* custom grid for the form in the enroll page */
+.custom-enroll-grid {
+  grid-template-columns: 0.66fr 0.33fr;
+}
+
+/* toggle plans */
+[data-toggle="label"].active {
+  background: theme(colors.white-400);
+}
+
+[data-toggle="card"].active {
+  display: block;
+}
+
+/* responsive header */
 @media (max-width: theme("screens.sm")) {
   [data-header="header"] {
     nav > ul {
