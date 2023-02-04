@@ -6,6 +6,7 @@
 html,
 body {
   color: theme(colors.black-400);
+  scroll-behavior: smooth;
 }
 
 /* keep the footer always in the bottom of the page */
