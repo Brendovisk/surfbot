@@ -14,25 +14,28 @@
   </head>
   <body>
     <header class="text-white font-bold">
-      <div class="bg-blue-400">
-        <p class="py-3 container mx-auto">Aulas na Praia Mansa de Sexta à Domingo das 06:00 às 14:00</p>
+      <div class="bg-blue-400 -md:hidden">
+        <p class="py-3 container">Aulas na Praia Mansa de Sexta à Domingo das 06:00 às 14:00</p>
       </div>
       <div class="bg-black-600">
-        <div class="container mx-auto flex justify-between items-center py-3">
+        <div class="container flex justify-between items-center py-3">
           <a href="#"><img src="/logo.4bcd4013.svg" alt="Surfbot"></a>
           <nav>
-            <ul class="flex gap-6">
+            <button class="uppercase rounded-sm p-2 bg-blue-200 hidden -md:flex">
+              menu
+            </button>
+            <ul class="flex gap-11 -md:absolute -md:top-[64px] -md:left-0 -md:flex-col -md:bg-black-600 -md:w-full -md:h-full-mobile -md:py-6 px-4">
               <li>
-                <a class="after:content-[''] hover:after:w-full after:transition-all after:duration-300 after:w-0 after:block after:h-1 after:bg-red-400" href="#">Praia</a>
+                <a class="relative -md:w-fit -md:block -md:before:hidden -md:text-3xl before:content-[''] before:rounded-full before:absolute before:bottom-2.5 before:-right-6 before:border-2 before:w-2 before:h-2 after:content-[''] hover:after:w-full after:transition-all after:duration-300 after:w-0 after:block after:h-1 after:bg-red-400" href="#">Praia</a>
               </li>
               <li>
-                <a class="after:content-[''] hover:after:w-full after:transition-all after:duration-300 after:w-0 after:block after:h-1 after:bg-red-400" href="#">Aulas</a>
+                <a class="relative -md:w-fit -md:block -md:before:hidden -md:text-3xl before:content-[''] before:rounded-full before:absolute before:bottom-2.5 before:-right-6 before:border-2 before:w-2 before:h-2 after:content-[''] hover:after:w-full after:transition-all after:duration-300 after:w-0 after:block after:h-1 after:bg-red-400" href="#">Aulas</a>
               </li>
               <li>
-                <a class="after:content-[''] hover:after:w-full after:transition-all after:duration-300 after:w-0 after:block after:h-1 after:bg-red-400" href="#">Contato</a>
+                <a class="relative -md:w-fit -md:block -md:before:hidden -md:text-3xl before:content-[''] before:rounded-full before:absolute before:bottom-2.5 before:-right-6 before:border-2 before:w-2 before:h-2 after:content-[''] hover:after:w-full after:transition-all after:duration-300 after:w-0 after:block after:h-1 after:bg-red-400" href="#">Contato</a>
               </li>
               <li>
-                <a class="relative after:content-[''] after:transition-all after:duration-300 after:w-full after:block after:h-1 after:bg-red-400 before:content-[''] hover:before:w-full before:transition-all before:duration-300 before:w-0 before:absolute before:left-0 before:-bottom-0 before:h-1 before:bg-blue-200" href="#">Matricule-se</a>
+                <a class="relative -md:w-fit -md:block -md:before:hidden -md:text-3xl after:content-[''] after:transition-all after:duration-300 after:w-full after:block after:h-1 after:bg-red-400 before:content-[''] hover:before:w-full before:transition-all before:duration-300 before:w-0 before:absolute before:left-0 before:-bottom-0 before:h-1 before:bg-blue-200" href="#">Matricule-se</a>
               </li>
             </ul>
           </nav>

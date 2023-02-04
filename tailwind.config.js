@@ -24,12 +24,26 @@ module.exports = {
       "red-400": "#EE2211",
       "red-600": "#D91504",
     },
+    container: {
+      center: true,
+      padding: "1rem",
+    },
     extend: {
       backgroundImage: {
         hero: "url('/src/assets/intro.jpg')",
         gallery: "url('/src/assets/foto-galeria.jpg')",
         map: "url('/src/assets/mapa.jpg')",
         quote: "url('/src/assets/quote.jpg')",
+      },
+      height: {
+        "full-mobile": "calc(100vh - 64px)",
+      },
+      screens: {
+        "-2xl": { max: "1535px" },
+        "-xl": { max: "1279px" },
+        "-lg": { max: "1023px" },
+        "-md": { max: "767px" },
+        "-sm": { max: "639px" },
       },
     },
   },
