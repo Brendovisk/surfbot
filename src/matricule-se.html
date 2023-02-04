@@ -305,154 +305,157 @@
               </fieldset>
             </div>
 
-            <fieldset class="h-fit rounded-md bg-white-200 px-6 pt-5 pb-7 -sm:px-4">
-              <span>
-                <legend class="font-bold text-lg mb-5">Escolha o Plano</legend>
-              </span>
-              <div
-                class="flex overflow-hidden rounded-md mb-10 h-10 gap-0.5 -sm:flex-col -sm:h-fit -sm:gap-4 -sm:rounded-none"
-              >
-                <label
-                  for="infantil"
-                  class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1 -sm:rounded-md -sm:py-3"
+            <div>
+              <fieldset class="h-fit rounded-md bg-white-200 px-6 pt-5 pb-7 -sm:px-4">
+                <span>
+                  <legend class="font-bold text-lg mb-5">Escolha o Plano</legend>
+                </span>
+                <div
+                  class="flex overflow-hidden rounded-md mb-10 h-10 gap-0.5 -sm:flex-col -sm:h-fit -sm:gap-4 -sm:rounded-none"
                 >
-                  <input
-                    data-toggle-trigger="plan"
-                    type="radio"
-                    name="plano"
-                    id="infantil"
-                    required
-                    class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
-                  />
-                  Infantil
-                </label>
-                <label
-                  for="adulto"
-                  class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1 -sm:rounded-md -sm:py-3"
-                >
-                  <input
-                    data-toggle-trigger="plan"
-                    type="radio"
-                    name="plano"
-                    id="adulto"
-                    required
-                    class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
-                  />
-                  Adulto
-                </label>
-                <label
-                  for="profissional"
-                  class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1 -sm:rounded-md -sm:py-3"
-                >
-                  <input
-                    data-toggle-trigger="plan"
-                    type="radio"
-                    name="plano"
-                    id="profissional"
-                    required
-                    class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
-                  />
-                  Profissional
-                </label>
+                  <label
+                    for="infantil"
+                    class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1 -sm:rounded-md -sm:py-3"
+                  >
+                    <input
+                      data-toggle-trigger="plan"
+                      type="radio"
+                      name="plano"
+                      id="infantil"
+                      required
+                      class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
+                    />
+                    Infantil
+                  </label>
+                  <label
+                    for="adulto"
+                    class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1 -sm:rounded-md -sm:py-3"
+                  >
+                    <input
+                      data-toggle-trigger="plan"
+                      type="radio"
+                      name="plano"
+                      id="adulto"
+                      required
+                      class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
+                    />
+                    Adulto
+                  </label>
+                  <label
+                    for="profissional"
+                    class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1 -sm:rounded-md -sm:py-3"
+                  >
+                    <input
+                      data-toggle-trigger="plan"
+                      type="radio"
+                      name="plano"
+                      id="profissional"
+                      required
+                      class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
+                    />
+                    Profissional
+                  </label>
+                </div>
+                <!-- Cards -->
+                <div>
+                  <div
+                    data-toggle-target="plan"
+                    class="hidden shadow-md bg-white rounded-md pb-9 px-14 -xl:px-10 -xl:pb-4 before:content-[''] before:block before:mx-auto before:h-9 before:-translate-y-5 before:mt-1 before:bg-logo before:bg-contain before:aspect-[22/39]"
+                  >
+                    <h3 class="uppercase text-xl font-bold text-center mb-9">Infantil</h3>
+                    <hr class="border-none h-0.5 bg-white-200 mb-7" />
+                    <ul>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        Público entre 5 e 15 anos
+                      </li>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        Equipamentos fornecidos
+                      </li>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        Horários de Sex. à Sab.
+                      </li>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        2 horas seguidas de aula
+                      </li>
+                    </ul>
+                    <hr class="border-none h-0.5 bg-white-200 mt-7 mb-4" />
+                    <span class="text-blue-400 font-bold">R$ 49,00 / Aula</span>
+                  </div>
+                  <div
+                    data-toggle-target="plan"
+                    class="hidden shadow-md bg-white rounded-md pb-9 px-14 -xl:px-10 before:content-[''] before:block before:mx-auto before:h-9 before:-translate-y-5 before:mt-1 before:bg-logo before:bg-contain before:bg-repeat-space before:aspect-[50/39]"
+                  >
+                    <h3 class="uppercase text-xl font-bold text-center mb-9">Adulto</h3>
+                    <hr class="border-none h-0.5 bg-white-200 mb-7" />
+                    <ul>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        Público entre 16 e 80 anos
+                      </li>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        Equipamentos fornecidos
+                      </li>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        Horários de Sex. à Sab.
+                      </li>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        3 horas seguidas de aula
+                      </li>
+                    </ul>
+                    <hr class="border-none h-0.5 bg-white-200 mt-7 mb-4" />
+                    <span class="text-blue-400 font-bold">R$ 69,00 / Aula</span>
+                  </div>
+                  <div
+                    data-toggle-target="plan"
+                    class="hidden shadow-md bg-white rounded-md pb-9 px-14 -xl:px-10 before:content-[''] before:block before:mx-auto before:h-9 before:-translate-y-5 before:mt-1 before:bg-logo before:bg-contain before:bg-repeat-space before:aspect-[80/39]"
+                  >
+                    <h3 class="uppercase text-xl font-bold text-center mb-9">Profissional</h3>
+                    <hr class="border-none h-0.5 bg-white-200 mb-7" />
+                    <ul>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        Experiência de 3 anos no surf
+                      </li>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        Você deve trazer o equipamento
+                      </li>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        Horários de Sex. à Sab.
+                      </li>
+                      <li
+                        class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
+                      >
+                        4 horas seguidas de aula
+                      </li>
+                    </ul>
+                    <hr class="border-none h-0.5 bg-white-200 mt-7 mb-4" />
+                    <span class="text-blue-400 font-bold">R$ 99,00 / Aula</span>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="block bg-icones bg-cover aspect-[221/337] w-[270px] mx-auto mt-10 -lg:hidden">
               </div>
-
-              <!-- Cards -->
-              <div>
-                <div
-                  data-toggle-target="plan"
-                  class="hidden shadow-md bg-white rounded-md pb-9 px-14 -xl:px-10 -xl:pb-4 before:content-[''] before:block before:mx-auto before:h-9 before:-translate-y-5 before:mt-1 before:bg-logo before:bg-contain before:aspect-[22/39]"
-                >
-                  <h3 class="uppercase text-xl font-bold text-center mb-9">Infantil</h3>
-                  <hr class="border-none h-0.5 bg-white-200 mb-7" />
-                  <ul>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      Público entre 5 e 15 anos
-                    </li>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      Equipamentos fornecidos
-                    </li>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      Horários de Sex. à Sab.
-                    </li>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      2 horas seguidas de aula
-                    </li>
-                  </ul>
-                  <hr class="border-none h-0.5 bg-white-200 mt-7 mb-4" />
-                  <span class="text-blue-400 font-bold">R$ 49,00 / Aula</span>
-                </div>
-                <div
-                  data-toggle-target="plan"
-                  class="hidden shadow-md bg-white rounded-md pb-9 px-14 -xl:px-10 before:content-[''] before:block before:mx-auto before:h-9 before:-translate-y-5 before:mt-1 before:bg-logo before:bg-contain before:bg-repeat-space before:aspect-[50/39]"
-                >
-                  <h3 class="uppercase text-xl font-bold text-center mb-9">Adulto</h3>
-                  <hr class="border-none h-0.5 bg-white-200 mb-7" />
-                  <ul>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      Público entre 16 e 80 anos
-                    </li>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      Equipamentos fornecidos
-                    </li>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      Horários de Sex. à Sab.
-                    </li>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      3 horas seguidas de aula
-                    </li>
-                  </ul>
-                  <hr class="border-none h-0.5 bg-white-200 mt-7 mb-4" />
-                  <span class="text-blue-400 font-bold">R$ 69,00 / Aula</span>
-                </div>
-                <div
-                  data-toggle-target="plan"
-                  class="hidden shadow-md bg-white rounded-md pb-9 px-14 -xl:px-10 before:content-[''] before:block before:mx-auto before:h-9 before:-translate-y-5 before:mt-1 before:bg-logo before:bg-contain before:bg-repeat-space before:aspect-[80/39]"
-                >
-                  <h3 class="uppercase text-xl font-bold text-center mb-9">Profissional</h3>
-                  <hr class="border-none h-0.5 bg-white-200 mb-7" />
-                  <ul>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      Experiência de 3 anos no surf
-                    </li>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      Você deve trazer o equipamento
-                    </li>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      Horários de Sex. à Sab.
-                    </li>
-                    <li
-                      class="flex items-center gap-x-1 mb-4 before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
-                    >
-                      4 horas seguidas de aula
-                    </li>
-                  </ul>
-                  <hr class="border-none h-0.5 bg-white-200 mt-7 mb-4" />
-                  <span class="text-blue-400 font-bold">R$ 99,00 / Aula</span>
-                </div>
-              </div>
-            </fieldset>
+            </div>
           </form>
         </div>
       </section>
