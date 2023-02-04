@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Website from the Origamid's design course, Built using Tailwind CSS framework" />
 
     <title>Surfbot</title>
 
@@ -31,37 +33,44 @@
         <div class="container flex justify-between items-center py-3">
           <a href="#"><img src="./assets/logo.svg" alt="Surfbot" /></a>
           <nav>
-            <button data-header="btn" class="uppercase rounded-sm p-2 bg-black-200 hidden -md:flex">
+            <button
+              data-header="btn"
+              class="uppercase rounded-sm p-2 bg-black-200 hidden -md:flex"
+              aria-label="Abrir Menu"
+              aria-expanded="false"
+              aria-controls="menu"
+            >
               <span></span>
             </button>
             <ul
+              id="menu"
               class="flex gap-11 -md:absolute -md:top-[64px] -md:overflow-hidden -md:left-0 -md:flex-col -md:bg-black-600 -md:w-full -md:h-0 -md:px-4"
             >
               <li class="-md:opacity-0">
                 <a
                   class="relative -md:w-fit -md:block -md:before:hidden -md:text-3xl before:content-[''] before:rounded-full before:absolute before:bottom-2.5 before:-right-6 before:border-2 before:w-2 before:h-2 after:content-[''] hover:after:w-full after:transition-all after:duration-300 after:w-0 after:block after:h-1 after:bg-red-400"
-                  href="#"
+                  href="#praia"
                   >Praia</a
                 >
               </li>
               <li class="-md:opacity-0">
                 <a
                   class="relative -md:w-fit -md:block -md:before:hidden -md:text-3xl before:content-[''] before:rounded-full before:absolute before:bottom-2.5 before:-right-6 before:border-2 before:w-2 before:h-2 after:content-[''] hover:after:w-full after:transition-all after:duration-300 after:w-0 after:block after:h-1 after:bg-red-400"
-                  href="#"
+                  href="#aulas"
                   >Aulas</a
                 >
               </li>
               <li class="-md:opacity-0">
                 <a
                   class="relative -md:w-fit -md:block -md:before:hidden -md:text-3xl before:content-[''] before:rounded-full before:absolute before:bottom-2.5 before:-right-6 before:border-2 before:w-2 before:h-2 after:content-[''] hover:after:w-full after:transition-all after:duration-300 after:w-0 after:block after:h-1 after:bg-red-400"
-                  href="#"
+                  href="#contato"
                   >Contato</a
                 >
               </li>
               <li class="-md:opacity-0">
                 <a
                   class="relative -md:w-fit -md:block -md:before:hidden -md:text-3xl after:content-[''] after:transition-all after:duration-300 after:w-full after:block after:h-1 after:bg-red-400 before:content-[''] hover:before:w-full before:transition-all before:duration-300 before:w-0 before:absolute before:left-0 before:-bottom-0 before:h-1 before:bg-blue-200"
-                  href="#"
+                  href="matricule-se.html"
                   >Matricule-se</a
                 >
               </li>
@@ -71,9 +80,11 @@
       </div>
     </header>
     <main>
-      <section class="bg-hero bg-cover min-h-[60vh] flex items-end pb-10">
-        <div class="container h-full flex justify-between items-center -lg:flex-col -lg:gap-10">
-          <h1 class="font-title text-white text-7xl -lg:text-5xl -lg:text-center">Escola de Surf</h1>
+      <section id="inicio" class="bg-hero bg-cover bg-center h-[60vh] max-h-[800px] flex items-end pb-10">
+        <div class="container flex justify-between items-center -lg:flex-col -lg:gap-10">
+          <h1 aria-labelledby="inicio" class="font-title text-white text-7xl -lg:text-5xl -lg:text-center">
+            Escola de Surf
+          </h1>
           <form method="POST" action="#" class="flex h-11">
             <input
               type="email"
@@ -89,15 +100,15 @@
           </form>
         </div>
       </section>
-      <section class="grid grid-cols-2 container py-20 -lg:flex -lg:flex-col-reverse -lg:gap-16">
+      <section id="praia" class="scroll-mt-20 grid grid-cols-2 container py-20 -lg:flex -lg:flex-col-reverse -lg:gap-16">
         <div class="pr-32 -lg:pr-0">
           <div class="bg-gallery bg-cover aspect-[570/670] -lg:hidden"></div>
           <div class="bg-map bg-cover w-11/12 mx-auto -mt-40 aspect-[540/240] -lg:-mt-0 -lg:w-full"></div>
-          <h3
+          <p
             class="mt-9 mb-2 uppercase flex items-center gap-2 text-black-600 font-bold before:content-[''] before:inline-block before:rounded-full before:border-2 before:border-red-200 before:w-2 before:h-2"
           >
             Como Chegar
-          </h3>
+          </p>
           <dl class="flex flex-wrap items-center gap-x-1 gap-y-2 max-w-[36ch] -lg:text-sm">
             <dt
               class="flex items-center gap-1 font-bold text-black-600 before:content-[''] before:inline-block before:w-3 before:h-[3px] before:bg-blue-400"
@@ -120,7 +131,10 @@
           </dl>
         </div>
         <div class="max-w-lg -lg:max-w-full">
-          <h2 class="font-title max-w-[11ch] text-7xl mb-16 -lg:text-5xl -lg:text-center -lg:max-w-full">
+          <h2
+            aria-labelledby="praia"
+            class="font-title max-w-[11ch] text-7xl mb-16 -lg:text-5xl -lg:text-center -lg:max-w-full"
+          >
             <span class="text-blue-400">Aulas</span> em uma das melhores praias do
             <span class="text-blue-400">Rio</span>.
           </h2>
@@ -158,10 +172,11 @@
         </div>
       </section>
       <section
-        class="mt-20 pb-20 bg-white-200 before:content-[''] before:bg-waves before:block before:w-44 before:bg-cover before:mx-auto before:-translate-y-8 before:aspect-[176/68]"
+        id="aulas"
+        class="scroll-mt-16 mt-20 pb-20 bg-white-200 before:content-[''] before:bg-waves before:block before:w-44 before:bg-cover before:mx-auto before:-translate-y-8 before:aspect-[176/68]"
       >
         <div class="container">
-          <h2 class="font-title text-7xl text-center mb-20 -lg:text-5xl">Aulas</h2>
+          <h2 aria-labelledby="aulas" class="font-title text-7xl text-center mb-20 -lg:text-5xl">Aulas</h2>
           <div class="grid grid-cols-3 gap-x-10 gap-y-20 mb-11 -lg:grid-cols-1">
             <div
               class="shadow-md bg-white rounded-md pb-9 px-20 -xl:px-10 -xl:pb-4 before:content-[''] before:block before:mx-auto before:h-12 before:-translate-y-7 before:mt-1 before:bg-logo before:bg-contain before:aspect-[22/39]"
@@ -193,7 +208,7 @@
               <hr class="border-none h-0.5 bg-white-200 mt-7 mb-4" />
               <span class="text-blue-400 font-bold">R$ 49,00 / Aula</span>
               <a
-                href="#"
+                href="matricule-se.html"
                 class="flex items-center justify-between text-lg uppercase rounded-md px-4 py-3 font-bold bg-black-400 text-white mt-10 transition-all duration-300 hover:shadow-lg hover:shadow-white-400"
               >
                 Matricule-se
@@ -230,7 +245,7 @@
               <hr class="border-none h-0.5 bg-white-200 mt-7 mb-4" />
               <span class="text-blue-400 font-bold">R$ 69 ,00 / Aula</span>
               <a
-                href="#"
+                href="matricule-se.html"
                 class="flex items-center justify-between text-lg uppercase rounded-md px-4 py-3 font-bold bg-black-400 text-white mt-10 transition-all duration-300 hover:shadow-lg hover:shadow-white-400"
               >
                 Matricule-se
@@ -267,7 +282,7 @@
               <hr class="border-none h-0.5 bg-white-200 mt-7 mb-4" />
               <span class="text-blue-400 font-bold">R$ 99,00 / Aula</span>
               <a
-                href="#"
+                href="matricule-se.html"
                 class="flex items-center justify-between text-lg uppercase rounded-md px-4 py-3 font-bold bg-black-400 text-white mt-10 transition-all duration-300 hover:shadow-lg hover:shadow-white-400"
               >
                 Matricule-se
@@ -285,15 +300,15 @@
         </div>
       </section>
       <section class="bg-quote bg-fixed bg-cover -lg:bg-scroll">
-        <figure class="min-h-[55vh] p-4 flex flex-col gap-6 justify-center items-center text-white">
+        <figure class="h-[55vh] max-h-[600px] p-4 flex flex-col gap-6 justify-center items-center text-white">
           <blockquote class="text-7xl -md:text-5xl font-title text-center max-w-[16ch]">
             “O surf liberta as ondas de uma vida.”
           </blockquote>
           <figcaption class="font-bold text-lg">Regis Pereira</figcaption>
         </figure>
       </section>
-      <section class="pt-20 pb-10">
-        <h2 class="font-title text-7xl text-center mb-20 -lg:text-5xl">Contato</h2>
+      <section id="contato" class="scroll-mt-20 pt-20 pb-10">
+        <h2 aria-labelledby="contato" class="font-title text-7xl text-center mb-20 -lg:text-5xl">Contato</h2>
         <div class="custom-grid grid container gap-x-36 -2xl:gap-x-20 -lg:grid-cols-1 -lg:gap-y-8">
           <form action="#" method="POST">
             <label for="nome">
@@ -326,13 +341,13 @@
                 class="block bg-white-200 p-4 rounded-md shadow-md shadow-gray-200 w-full resize-none h-64"
               ></textarea>
             </label>
-            <a
-              href="#"
+            <button
+              type="submit"
               class="flex items-center justify-between w-fit gap-4 text-lg uppercase rounded-md px-4 py-3 font-bold bg-black-400 text-white mt-10 transition-all duration-300 hover:shadow-lg hover:shadow-white-400"
             >
               Enviar Mensagem
               <img src="./assets/next.svg" alt="" />
-            </a>
+            </button>
           </form>
           <hr class="border-none h-full w-0.5 bg-white-200" />
           <address
@@ -345,7 +360,7 @@
                 Rio de Janeiro - RJ <br />
                 Procure a barraca vermelha
               </p>
-              <a href="#" class="flex items-center gap-2 uppercase font-bold text-black-400 text-lg mt-3 mb-2">
+              <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 uppercase font-bold text-black-400 text-lg mt-3 mb-2">
                 Ver no mapa
                 <img src="./assets/next-alt.svg" alt="" width="17" />
               </a>

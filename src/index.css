@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* set the default font color for the document */
 html,
 body {
   color: theme(colors.black-400);
+  scroll-behavior: smooth;
+}
+
+/* keep the footer always in the bottom of the page */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 /* custom grid for the contact in the homepage */
