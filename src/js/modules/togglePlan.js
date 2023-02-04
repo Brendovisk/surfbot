@@ -1,27 +1,28 @@
 export default class TogglePlan {
-  constructor() {
-    this.inputs = document.querySelectorAll("[data-toggle='input']");
-    this.cards = document.querySelectorAll("[data-toggle='card']");
+  constructor(trigger, target, activeClass) {
+    this.trigger = document.querySelectorAll(trigger);
+    this.target = document.querySelectorAll(target);
+    this.activeClass = activeClass;
   }
 
   removeActiveClass() {
-    this.inputs.forEach((input, index) => {
-      input.parentElement.classList.remove("active");
-      this.cards[index].classList.remove("active");
+    this.trigger.forEach((input, index) => {
+      input.parentElement.classList.remove(this.activeClass);
+      this.target[index].classList.remove(this.activeClass);
     });
   }
 
   addActiveClass() {
-    this.inputs.forEach((input, index) => {
+    this.trigger.forEach((input, index) => {
       if (input.checked) {
-        input.parentElement.classList.add("active");
-        this.cards[index].classList.add("active");
+        input.parentElement.classList.add(this.activeClass);
+        this.target[index].classList.add(this.activeClass);
       }
     });
   }
 
   togglePlanEventListeners() {
-    this.inputs.forEach((input) => {
+    this.trigger.forEach((input) => {
       input.addEventListener("click", () => {
         this.removeActiveClass();
         this.addActiveClass();
@@ -30,7 +31,7 @@ export default class TogglePlan {
   }
 
   init() {
-    if (this.inputs.length) {
+    if (this.trigger.length && this.target.length && this.activeClass) {
       this.addActiveClass();
       this.togglePlanEventListeners();
     }

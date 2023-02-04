@@ -74,10 +74,10 @@
       <section>
         <h1 class="font-title text-center py-6 px-2 text-7xl -lg:text-5l text-black-400 bg-white-200">Matricule-se</h1>
         <div class="container py-12">
-          <form action="#" method="POST" class="grid custom-enroll-grid gap-x-36 -2xl:gap-x-20">
+          <form action="#" method="POST" class="grid custom-enroll-grid gap-x-28 -2xl:gap-x-20">
             <div>
               <label for="nome">
-                <span class="text-black-400 font-bold mt-4 mb-2 block text-lg">Nome</span>
+                <span class="text-black-400 font-bold mb-2 block text-lg">Nome</span>
                 <input
                   type="text"
                   id="nome"
@@ -163,51 +163,173 @@
                   </select>
                 </label>
               </div>
+              <fieldset>
+                <span class="block font-bold text-lg text-blue-400 mt-8 mb-4"><legend>Forma de Pagamento</legend></span>
+                <hr class="border-none h-0.5 w-full bg-white-200 mb-8" />
+
+                <div class="flex w-fit overflow-hidden rounded-md mb-10 h-10 gap-0.5">
+                  <label for="cartao" class="bg-white-200 font-bold flex items-center gap-1.5 px-3 cursor-pointer">
+                    <input
+                      data-toggle-trigger="payment"
+                      type="radio"
+                      name="pagamento"
+                      id="cartao"
+                      required
+                      class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
+                    />
+                    Cartão de Crédito
+                  </label>
+                  <label for="boleto" class="bg-white-200 font-bold flex items-center gap-1.5 px-3 cursor-pointer">
+                    <input
+                      data-toggle-trigger="payment"
+                      type="radio"
+                      name="pagamento"
+                      id="boleto"
+                      required
+                      class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
+                    />
+                    Boleto Bancário
+                  </label>
+                </div>
+
+                <div data-toggle-target="payment" class="hidden">
+                  <div class="grid grid-cols-2 gap-x-7 gap-y-2">
+                    <label for="nome-cartao">
+                      <span class="text-black-400 font-bold mt-4 mb-2 block text-lg">Nome no Cartão</span>
+                      <input
+                        type="text"
+                        id="nome-cartao"
+                        name="nome-cartao"
+                        placeholder="Nome impresso no cartão"
+                        required
+                        class="block bg-white-200 px-4 h-12 rounded-md shadow-md shadow-gray-200 w-full placeholder:font-bold placeholder:text-white-400"
+                      />
+                    </label>
+                    <fieldset>
+                      <span class="text-black-400 font-bold mt-4 mb-2 block text-lg"
+                        ><legend>Data de Expiração</legend></span
+                      >
+                      <div class="grid grid-cols-2 gap-x-7 gap-y-2">
+                        <label
+                          for="mes-expiracao"
+                          class="relative after:content-[''] after:absolute after:right-4 after:bottom-5 after:bg-dropdown after:bg-cover after:aspect-[11/6] after:w-3"
+                        >
+                          <span class="block h-0 w-0 opacity-0">Mês de Expiração</span>
+                          <select
+                            name="mes-expiracao"
+                            id="mes-expiracao"
+                            class="block relative bg-white-200 pl-4 pr-10 h-12 rounded-md shadow-md shadow-gray-200 w-full font-bold text-white-400 appearance-none"
+                          >
+                            <option value="" hidden>Mês</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                          </select>
+                        </label>
+                        <label
+                          for="ano-expiracao"
+                          class="relative after:content-[''] after:absolute after:right-4 after:bottom-5 after:bg-dropdown after:bg-cover after:aspect-[11/6] after:w-3"
+                        >
+                          <span class="block h-0 w-0 opacity-0">Ano de Expiração</span>
+                          <select
+                            name="ano-expiracao"
+                            id="ano-expiracao"
+                            class="block relative bg-white-200 pl-4 pr-10 h-12 rounded-md shadow-md shadow-gray-200 w-full font-bold text-white-400 appearance-none"
+                          >
+                            <option value="" hidden>Ano</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                          </select>
+                        </label>
+                      </div>
+                    </fieldset>
+                    <label for="numero-cartao">
+                      <span class="text-black-400 font-bold mt-4 mb-2 block text-lg">Número do Cartão</span>
+                      <input
+                        type="text"
+                        id="numero-cartao"
+                        name="numero-cartao"
+                        placeholder="5555 5555 5555 5555"
+                        required
+                        class="block bg-white-200 px-4 h-12 rounded-md shadow-md shadow-gray-200 w-full placeholder:font-bold placeholder:text-white-400"
+                      />
+                    </label>
+                    <label for="codigo-cartao">
+                      <span class="text-black-400 font-bold mt-4 mb-2 block text-lg">Código de Segurança</span>
+                      <input
+                        type="text"
+                        id="codigo-cartao"
+                        name="codigo-cartao"
+                        placeholder="XXX"
+                        required
+                        class="block bg-white-200 px-4 h-12 rounded-md shadow-md shadow-gray-200 w-full placeholder:font-bold placeholder:text-white-400"
+                      />
+                    </label>
+                  </div>
+                </div>
+
+                <p data-toggle-target="payment" class="hidden text-2xl my-8">
+                  Iremos te redirecionar para a tela de pagamento do boleto assim que você clicar em
+                  <span class="font-bold">"Realizar Matrícula"</span>.
+                </p>
+
+                <hr class="border-none h-0.5 w-full bg-white-200 my-7" />
+
+                <p class="text-lg">Seu cartão será debitado em R$ 49,00</p>
+
+                <button
+                  type="submit"
+                  href="#"
+                  class="inline-block uppercase font-bold my-4 text-lg py-3 px-7 text-white bg-blue-400 rounded-md transition-all duration-300 hover:shadow-xl hover:shadow-white-400 hover:brightness-105"
+                >
+                  Realizar Matrícula
+                </button>
+
+                <small class="flex items-center gap-1.5 text-sm">
+                  <img src="./assets/cadeado.svg" alt="" width="12" />
+                  Informações seguras e criptografadas
+                </small>
+              </fieldset>
             </div>
-            <fieldset class="rounded-md bg-white-200 p-4">
+
+            <fieldset class="h-fit rounded-md bg-white-200 px-6 pt-5 pb-7">
               <span>
                 <legend class="font-bold text-lg mb-5">Escolha o Plano</legend>
               </span>
               <div class="flex overflow-hidden rounded-md mb-10 h-10 gap-0.5">
-                <label
-                  data-toggle="label"
-                  for="infantil"
-                  class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1"
-                >
+                <label for="infantil" class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1">
                   <input
-                    data-toggle="input"
+                    data-toggle-trigger="plan"
                     type="radio"
                     name="plano"
                     id="infantil"
+                    required
                     class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
-                    checked
                   />
                   Infantil
                 </label>
-                <label
-                  data-toggle="label"
-                  for="adulto"
-                  class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1"
-                >
+                <label for="adulto" class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1">
                   <input
-                    data-toggle="input"
+                    data-toggle-trigger="plan"
                     type="radio"
                     name="plano"
                     id="adulto"
+                    required
                     class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
                   />
                   Adulto
                 </label>
                 <label
-                  data-toggle="label"
                   for="profissional"
                   class="bg-white font-bold flex items-center gap-1.5 px-3 cursor-pointer flex-1"
                 >
                   <input
-                    data-toggle="input"
+                    data-toggle-trigger="plan"
                     type="radio"
                     name="plano"
                     id="profissional"
+                    required
                     class="appearance-none before:content-[''] before:block before:w-3 before:h-3 rounded-full border-[1px] border-blue-400 checked:before:border-4 checked:before:rounded-full checked:before:border-blue-400 checked:before:bg-white"
                   />
                   Profissional
@@ -217,7 +339,7 @@
               <!-- Cards -->
               <div>
                 <div
-                  data-toggle="card"
+                  data-toggle-target="plan"
                   class="hidden shadow-md bg-white rounded-md pb-9 px-14 -xl:px-10 -xl:pb-4 before:content-[''] before:block before:mx-auto before:h-9 before:-translate-y-5 before:mt-1 before:bg-logo before:bg-contain before:aspect-[22/39]"
                 >
                   <h3 class="uppercase text-xl font-bold text-center mb-9">Infantil</h3>
@@ -248,7 +370,7 @@
                   <span class="text-blue-400 font-bold">R$ 49,00 / Aula</span>
                 </div>
                 <div
-                  data-toggle="card"
+                  data-toggle-target="plan"
                   class="hidden shadow-md bg-white rounded-md pb-9 px-14 -xl:px-10 before:content-[''] before:block before:mx-auto before:h-9 before:-translate-y-5 before:mt-1 before:bg-logo before:bg-contain before:bg-repeat-space before:aspect-[50/39]"
                 >
                   <h3 class="uppercase text-xl font-bold text-center mb-9">Adulto</h3>
@@ -279,7 +401,7 @@
                   <span class="text-blue-400 font-bold">R$ 69 ,00 / Aula</span>
                 </div>
                 <div
-                  data-toggle="card"
+                  data-toggle-target="plan"
                   class="hidden shadow-md bg-white rounded-md pb-9 px-14 -xl:px-10 before:content-[''] before:block before:mx-auto before:h-9 before:-translate-y-5 before:mt-1 before:bg-logo before:bg-contain before:bg-repeat-space before:aspect-[80/39]"
                 >
                   <h3 class="uppercase text-xl font-bold text-center mb-9">Profissional</h3>

@@ -18,11 +18,11 @@ body {
 }
 
 /* toggle plans */
-[data-toggle="label"].active {
+label.active {
   background: theme(colors.white-400);
 }
 
-[data-toggle="card"].active {
+[data-toggle-target].active {
   display: block;
 }
 
