@@ -7,6 +7,11 @@ export default class Header {
 
   toggleClass() {
     this.header.classList.toggle("opened");
+    if (this.header.classList.contains("opened")) {
+      this.btn.setAttribute("aria-expanded", true);
+    } else {
+      this.btn.setAttribute("aria-expanded", false);
+    }
   }
 
   headerEventListener() {
