@@ -1,8 +1,13 @@
 export default class TogglePlan {
-  constructor(trigger, target, activeClass) {
+  constructor(trigger, target, activeClass, baseValue, finalValue) {
     this.trigger = document.querySelectorAll(trigger);
     this.target = document.querySelectorAll(target);
     this.activeClass = activeClass;
+
+    if (baseValue !== undefined && finalValue !== undefined) {
+      this.baseValue = document.querySelectorAll(baseValue);
+      this.finalValue = document.querySelector(finalValue);
+    }
   }
 
   removeActiveClass() {
@@ -16,6 +21,10 @@ export default class TogglePlan {
     this.trigger[index].checked = true;
     this.trigger[index].parentElement.classList.add(this.activeClass);
     this.target[index].classList.add(this.activeClass);
+
+    if (this.baseValue !== undefined && this.finalValue !== undefined) {
+      this.changePrice(index);
+    }
   }
 
   togglePlanEventListeners() {
@@ -25,6 +34,10 @@ export default class TogglePlan {
         this.addActiveClass(index);
       });
     });
+  }
+
+  changePrice(index) {
+    this.finalValue.innerText = this.baseValue[index].textContent;
   }
 
   init() {
