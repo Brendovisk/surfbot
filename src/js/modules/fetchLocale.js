@@ -1,8 +1,11 @@
 export default class FetchLocals {
-  constructor(state, city) {
+  constructor(state, city, cep) {
     this.state = document.querySelector(state);
     this.city = document.querySelector(city);
+    this.cep = document.querySelector(cep);
   }
+
+  getCEP() {}
 
   stateChange() {
     this.state.addEventListener("change", () => {
@@ -42,6 +45,9 @@ export default class FetchLocals {
   init() {
     if (this.state && this.city) {
       this.getState();
+    }
+    if (this.cep) {
+      this.getCEP();
     }
     return this;
   }

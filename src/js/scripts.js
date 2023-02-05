@@ -1,6 +1,6 @@
 import Header from "./modules/header";
 import TogglePlan from "./modules/togglePlan";
-import FetchLocals from "./modules/fetchLocals";
+import FetchLocals from "./modules/fetchLocale";
 
 const header = new Header();
 
@@ -18,7 +18,7 @@ const togglePaymentMethod = new TogglePlan(
   "active"
 );
 
-const fetchLocals = new FetchLocals("select[name='estado']", "select[name='cidade']");
+const fetchLocals = new FetchLocals("select[name='estado']", "select[name='cidade']", "input[name='cep']");
 
 header.init();
 togglePlan.init();
