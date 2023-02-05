@@ -1,6 +1,7 @@
 export default class Header {
   constructor() {
     this.header = document.querySelector("[data-header='header']");
+    this.links = document.querySelectorAll("[data-header='link']");
     this.btn = document.querySelector("[data-header='btn']");
     this.toggleClass = this.toggleClass.bind(this);
   }
@@ -14,8 +15,17 @@ export default class Header {
     }
   }
 
+  linksEvent() {
+    this.links.forEach((link) => {
+      link.addEventListener("click", () => {
+        this.toggleClass();
+      });
+    });
+  }
+
   headerEventListener() {
     this.btn.addEventListener("click", this.toggleClass);
+    this.linksEvent();
   }
 
   init() {
