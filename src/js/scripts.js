@@ -1,7 +1,9 @@
 import Header from "./modules/header";
 import TogglePlan from "./modules/togglePlan";
+import FetchLocals from "./modules/fetchLocale";
 
 const header = new Header();
+
 const togglePlan = new TogglePlan(
   "[data-toggle-trigger='plan']",
   "[data-toggle-target='plan']",
@@ -9,12 +11,16 @@ const togglePlan = new TogglePlan(
   "[data-price='base']",
   "[data-price='value']"
 );
+
 const togglePaymentMethod = new TogglePlan(
   "[data-toggle-trigger='payment']",
   "[data-toggle-target='payment']",
   "active"
 );
 
+const fetchLocals = new FetchLocals("select[name='estado']", "select[name='cidade']", "input[name='cep']");
+
 header.init();
 togglePlan.init();
 togglePaymentMethod.init();
+fetchLocals.init();
