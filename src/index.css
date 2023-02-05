@@ -36,7 +36,7 @@ label.active {
 }
 
 /* responsive header */
-@media (max-width: theme("screens.sm")) {
+@media (max-width: theme("screens.-md.max")) {
   [data-header="header"] {
     nav > ul {
       transition: 0.3s;
