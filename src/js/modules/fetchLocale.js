@@ -5,10 +5,12 @@ export default class FetchLocals {
     this.cep = document.querySelector(cep);
   }
 
-  getCEP() {}
+  getCEP() {
+    // todo
+  }
 
   stateChange() {
-    this.state.addEventListener("change", () => {
+    this.state.addEventListener("input", () => {
       this.getCity(this.state.value);
     });
   }
@@ -16,6 +18,14 @@ export default class FetchLocals {
   cleanOptions(value) {
     const defaultOption = value.querySelector("option").outerHTML;
     return (value.innerHTML = defaultOption);
+  }
+
+  toggleLoader() {
+    const loader = document.querySelector("[data-loader]");
+    loader.classList.toggle("hidden");
+    loader.classList.toggle("flex");
+    document.body.classList.toggle("overflow-hidden");
+    document.body.classList.toggle("lg:pr-4");
   }
 
   getState() {
@@ -31,12 +41,14 @@ export default class FetchLocals {
 
   getCity(state) {
     this.cleanOptions(this.city);
+    this.toggleLoader();
     fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${state}/municipios?orderBy=nome`).then(
       (response) => {
         response.json().then((data) => {
           data.forEach((city) => {
             this.city.innerHTML += `<option value="${city.sigla}">${city.nome}</option>`;
           });
+          this.toggleLoader();
         });
       }
     );
